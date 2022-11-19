@@ -1,0 +1,16 @@
+---
+- name: "Initialize Main"
+  shell: microk8s.add-node --format json
+  register: microk8AddNode
+
+# - name: "Join command"
+#   set_fact:
+#     join_command: "microk8s join {{ (microk8AddNode.stdout | from_json).urls[0] }}"
+#   cacheable: yes
+#   with_items: "{{ microk8AddNode.stdout }}"
+
+- debug: var=microk8AddNode
+  run_once: true
+
+- debug: var=join_command
+  run_once: true

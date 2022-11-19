@@ -1,0 +1,8 @@
+---
+- name: "Install microk8s and allow it to update automatically"
+  become: true
+  shell: snap install microk8s --classic
+
+# - name: "Follow specific version of kubernetes"
+#   become: true
+#   shell: snap install microk8s --classic --channel=1.17/stable

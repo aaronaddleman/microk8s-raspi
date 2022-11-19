@@ -1,0 +1,15 @@
+---
+nodes:
+  hosts:
+    node-1:
+      ansible_host: 10.0.0.61
+    node-2:
+      ansible_host: 10.0.0.62
+    node-3:
+      ansible_host: 10.0.0.65
+  vars:
+    ansible_ssh_private_key_file: ~/.ssh/mk8_rsa
+main:
+  hosts:
+    node-0:
+      ansible_host: 10.0.0.60

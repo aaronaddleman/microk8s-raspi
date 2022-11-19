@@ -1,0 +1,3 @@
+---
+- name: "Uptime of hosts"
+  shell: "uptime -p"
